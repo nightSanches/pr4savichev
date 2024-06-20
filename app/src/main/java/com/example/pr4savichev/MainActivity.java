@@ -19,11 +19,22 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onStepAge(View view){
+        EditText _name = findViewById(R.id.editTextText);
+        String strName = _name.getText().toString();
+
         setContentView(R.layout.step_2);
+
+        TextView tv =findViewById(R.id.textView);
+        tv.setText("Очень приятно познакомиться " + strName + "\nМеня зовут Умный.\nСколько тебе лет?");
     }
 
     public void onStepSex(View view){
+        EditText _age = findViewById(R.id.editTextText);
+        String strAge = _age.getText().toString();
+
         setContentView(R.layout.step_3);
+        TextView tv =findViewById(R.id.textView);
+        tv.setText("Ничего себе ты большой, целых " + strAge + " лет\nКакого ты пола?");
     }
     public void onStepEmail(View view){
         setContentView(R.layout.step_4);
